@@ -1,0 +1,647 @@
+#wrap {
+    width: 100%;
+}
+
+#main {
+    width: 100%;
+    height: 670px;
+    background: url(../images/main_img01.jpg) no-repeat 50% 0;
+    background-size: cover /*배경이미지 1400px*/
+}
+
+#main .container {
+    width: 100%;
+    height: 530px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    
+}
+
+#main .container h3 {
+    font-size: 44px;
+    color: #fff;
+}
+
+#main .container p {
+    font-size: 25px;
+}
+
+#header_m {
+    display: none;
+}
+
+#header {
+    width: 100%;
+    height: 140px;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+}
+
+#header_in {
+    width: 1300px;
+    height: 140px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#header_in .logo {
+    width: 350px;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#header_in .group {
+    width: 690px;
+    height: 140px;
+}
+
+#header_in .info_mn {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+#header_in .info_mn li{
+    float: left;
+}
+
+#header_in .info_mn li:first-child::after{
+    content: "|";
+    padding: 0 10px;
+    font-size: 12px;
+    position: relative;
+    top: -2px;
+    color: #fff;
+}
+#header_in .info_mn a{
+    font-size: 12px;
+    color: #fff;
+}
+
+#header_in nav {
+    float: left;
+    width: 100%;
+}
+
+#header_in nav ul {
+    display: flex;
+    justify-content: space-between;
+    margin-top:20px;
+} 
+#header_in nav li a {
+    font-size: 22px;
+    color: #fff;
+}
+
+/* 컨텐츠 */
+
+#contents {
+    width: 100%;
+}
+
+#best {
+    width: 100%;
+    height: 850px;
+
+}
+
+#best header {
+    width: 100%;
+    height: 190px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#best header h3 {
+    font-size: 45px;
+}
+#best section {
+    width: 100%;
+    height: 680px;
+    display: flex;
+    justify-content: center
+}
+
+#best section ul {
+    width: 1300px;
+    height: 600px;
+    position: relative;
+    top: -30px;
+    display: flex;
+    justify-content: space-between;
+}
+#best section li {
+    width: 420px;
+    height: 600px;
+    text-align: center;
+}
+
+#best section li img {
+    width: 100%;
+}
+
+#best section li h4 {
+    font-size: 24px;
+    color: #000;
+    padding: 35px 0 25px;
+    box-sizing: border-box;
+}
+#best section li p{
+    font-size: 15px;
+    line-height: 29px;
+    margin-bottom: 30px;
+}
+#best section li a{
+    
+    font-size: 16px;
+    border-top: 1px solid #000;
+    color: #000;
+}
+
+
+#group {
+    width: 100%;
+    height: 480px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#advice {
+    width: 860px;
+    height: 240px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ccc;
+}
+
+#advice ul {
+
+}
+#advice ul li {
+    float: left;
+    margin-right: 20px;
+    width: 390px;
+    height: 120px;
+    border: 2px solid #fff ;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#advice ul li img {
+    margin-right: 20px;
+    /* vertical-align: middle; */
+}
+
+#advice ul li:last-child {
+    margin-right: 0;
+}
+
+#notice {
+    margin-left: 40px;
+    width: 400px;
+    height: 240px;
+    background-color: #ccc;
+}
+
+#notice header {
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#notice header h3 {
+    font-size: 24px;
+}
+
+#notice header a {
+    font-size: 10px;
+}
+
+
+#notice section {
+    padding: 10px;
+}
+#notice section ul {
+    width: 100%;
+}
+#notice section li {
+    margin-bottom: 10px;
+    background: url(../images/ico_bullet.png) no-repeat 0 50%;
+    white-space: nowrap; /* 글자가 아래쪽 줄바꿈 방지*/
+    overflow: hidden; /* 부모 영역에서 벗어나는 글자 숨김*/
+    text-overflow: ellipsis; /* 짤리게 된 글자 모양 점점점으로 처리 */
+    padding-left: 15px;
+    box-sizing: border-box;
+
+}
+
+     /* 반응형 시작 */
+/* 15 , 17 19 인치 모니터 크기에 따라 설정 해주면 된다 */
+
+@media screen and (max-width:1300px) {
+    #main {
+        width: 100%;
+        height: 670px; /* ( 670 / 1300 ) * 100 => 51vw  */
+        /* background: url(../images/main_img01.jpg) no-repeat 0 0; */
+        /* background-size: 100%; 배경이미지 1400px */
+    }
+    #header_in {
+        width: 100%;
+        height: 140px;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    #header_in .logo {
+        width: 26.9%; /* (350 / 1300) * 100 */
+        height: 140px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #header_in .logo img {
+        width: 90%;
+    }
+    #header_in .group {
+        width: 53%; /* (690 / 1300) * 100 */
+        height: 140px;
+    }
+    
+    #header_in .info_mn {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    #header_in .info_mn li{
+        float: left;
+    }
+    
+    #header_in .info_mn li:first-child::after{
+        content: "|";
+        padding: 0 10px;
+        font-size: 12px;
+        position: relative;
+        top: -2px;
+        color: #fff;
+    }
+    #header_in .info_mn a{
+        font-size: 12px;
+        color: #fff;
+    }
+    
+    #header_in nav {
+        float: left;
+        width: 100%;
+    }
+    
+    #header_in nav ul {
+        display: flex;
+        justify-content: space-between;
+        margin-top:20px;
+    } 
+    #header_in nav li a {
+        font-size: 1.6vw; /* vw 1300 = 100vw , (22 / 1300) * 100 */
+        color: #fff;
+    }
+
+    /* 내용에서  top3 부분 */
+    #best {
+        width: 100%;
+        height: auto;
+    
+    }
+    #best section {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center
+    }
+    
+    #best section ul {
+        width: 100%;
+        height: 55vw; /* (600 / 1300) * 100 46  */
+        position: relative;
+        top: -30px;
+        display: flex;
+        justify-content: space-between;
+    }
+    #best section li {
+        width: 32%; /* (420 / 1300) * 100 => 32% */
+        text-align: center;
+    }
+    
+    #best section li img {
+        width: 100%;
+    }
+    
+    #best section li h4 {
+        font-size: 24px;
+        color: #000;
+        padding: 35px 0 25px;
+        box-sizing: border-box;
+    }
+    #best section li p{
+        font-size: 15px;
+        line-height: 29px;
+        margin-bottom: 30px;
+    }
+    #best section li a{
+        
+        font-size: 16px;
+        border-top: 1px solid #000;
+        color: #000;
+    }
+      /*  --------------하단---------------  */
+    #group {
+        width: 100%;
+        height: 480px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        
+    }
+  
+
+    #advice {
+        width: 60%; /* (860/1300) * 100 */
+        height: 240px;
+        background-color: #ccc;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    #advice ul {
+        width: 100%;
+    }
+    #advice ul li {
+        float: left;
+        margin-right: 0px;
+        width: 49.5%; /* (390 / 860) * 100 */
+        height: 120px;
+        border: 2px solid #fff ;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #advice ul li img {
+        margin-right: 20px;
+        /* vertical-align: middle; */
+    }
+    
+    #advice ul li:last-child {
+        margin-right: 0;
+    }
+    
+    #notice {
+        margin-left: 10px;
+        width: 36%; /* (400 / 1300) * 100 => 30% */
+        height: 240px;
+        background-color: #ccc;
+    }
+}
+
+
+@media screen and (max-width: 960px) {
+    #header_in {
+        width: 100%;
+        height: 140px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #header_in .logo {
+        width: 30%; /* (350 / 1300) * 100 */
+        height: 140px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #header_in .group {
+        width: 65%; /* (690 / 1300) * 100 */
+        height: 140px;
+    }
+    
+}
+
+
+/* ---------모바일 시작 ------- */
+
+/* 삼성, 안드로이드 480 px */
+/* 아이폰 320px */
+/* 모바일은 다 %로 작업 */
+
+@media screen and (max-width: 580px) {
+    #header {
+        display: none;
+    }
+    #header_m {
+        display: block;
+        width: 100%;
+        height: 100px;
+        background-color: aquamarine;
+    } 
+
+    #best header h3 {
+        text-align: center;
+        font-size: 6vw; /* (45 / 580) * 100*/
+    }
+    
+}
+
+@media screen and (max-width : 520px) {
+    #best header h3 {
+        text-align: center;
+        font-size: 6vw; /* (45 / 580) * 100*/
+    }
+    #best section ul {
+        width: 100%;
+        height: 70vw; /* (600 / 1300) * 100 46  */
+        position: relative;
+        top: -30px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    #header_m {
+        display: block;
+        width: 100%;
+        height: 80px;
+    }
+    #header {
+        display: none;
+    }
+    #main .container {
+        width: 100%;
+        height: 530px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    
+    #main .container h3 {
+        font-size: 9vw; /* ( 44 / 480 ) * 100 */
+        color: #fff;
+    }
+    
+    #main .container p {
+        font-size: 16px; /* 모바일은 작은 크기가 좋다 */
+    }
+
+    
+    #best {
+        width: 100%;
+        height: auto;
+    
+    }
+    #best header {
+        width: 100%;
+        height: 190px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #best header h3 {
+        font-size: 6vw; /*( 45 / 480 ) * 100   */ 
+    }
+    #best section {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center
+    }
+    
+    #best section ul {
+        width: 100%;
+        height: auto; /* (600 / 1300) * 100 46  */
+        position: relative;
+        top: -30px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    #best .contents_in li {
+        width: 100%; /* (420 / 1300) * 100 => 32% */
+        text-align: center;
+        padding: 5px 5px 20px;
+        box-sizing: border-box;
+        height: auto;
+    }
+    
+    #best section li img {
+        width: 100%;
+    }
+    
+    #best section li h4 {
+        font-size: 24px;
+        color: #000;
+        padding: 35px 0 25px;
+        box-sizing: border-box;
+    }
+    #best section li p{
+        font-size: 15px;
+        line-height: 29px;
+        margin-bottom: 30px;
+        padding: 0 50px;
+    }
+    #best section li a{
+        
+        font-size: 16px;
+        border-top: 1px solid #000;
+        color: #000;
+    }
+
+    #group {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+  
+
+    #advice {
+        width: 100%; /* (860/1300) * 100 */
+        height: auto;
+        background-color: #ccc;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px  0;
+    }
+    
+    #advice ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    #advice ul li {
+        float: none;
+        margin-right: 0px;
+        margin-bottom: 10px;
+        width: 90%; /* (390 / 860) * 100 */
+        height: 120px;
+        border: 2px solid #fff ;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #advice ul li img {
+        margin-right: 20px;
+        /* vertical-align: middle; */
+    }
+    
+    #advice ul li:last-child {
+        margin-bottom: 0;
+    }
+    
+    #notice {
+        margin-left: 0px;
+        width: 100%; /* (400 / 1300) * 100 => 30% */
+        height: 240px;
+        background-color: #ccc;
+    }
+}
+
+
+@media screen and (max-width: 320px) {
+    
+}
+
